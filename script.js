@@ -401,3 +401,53 @@ function checkFirstnameAndLastname(){
     }
 }
 
+function getTheLongerName(firstN, lastN){
+    if(firstN.length>lastN.length){
+        return firstN;
+    }
+    else{
+        return lastN;
+    }
+}
+
+
+function checkIfStringsAreSimilar(str1,str2){
+    var i = 0
+    str1.toUpperCase()
+    str2.toUpperCase()
+
+    while(i<(str1.length+str2.length)){
+        if(str1.length == str2.length){
+            if(str1[i] == str2[i]){
+                i++;
+            }
+        }
+        else{
+            return "the strings are diffrent";
+        }
+    }
+    return "the strings are identical";
+}
+
+function printUserNameInfo(){
+    var userName = prompt("please enter your name")
+    var end ;
+
+    console.log("your name length is:" +userName.length);
+
+    for(i=0; i<userName.length; i++){
+        if(userName[i] == " "){
+            console.log("your name contain spaces");
+            end = i;
+        }
+    }
+
+    console.log(userName.substring(0,end));
+
+    console.log(userName.substring(end+1,userName.length));
+}
+
+function partingAString(str,fNum,sNum){
+
+    return str.substring(parseInt(fNum), parseInt(sNum));
+}
