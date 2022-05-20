@@ -346,4 +346,58 @@ function checkHowManyNames(someName){
 
 }
 
-    
+function getLongestLastNamePrintShortest(str1,str2){
+
+    for(i=0; i<(str1.length+str2.length); i++){
+        if(str1.length>str2.length){
+            console.log(str2.toLowerCase())
+            return str1
+
+        }
+        console.log(str1.toLowerCase())
+        return str2
+    }
+
+}
+
+function getFirstCharFnameDotLnameUpperCase(fName,lName){
+    for(i=0; i<(fName.length+lName.length); i++){
+        return fName.substr(0, 1).toUpperCase()+"."+lName.toUpperCase()
+    }
+}
+
+function getExcistingCarIndexOrFullString(str,tav){
+    if(str.indexOf(tav) != -1){
+        return str.indexOf(tav)
+    }
+    else{
+        return str
+    }
+}
+
+function getStringLongerThenSixOrCharInString(str,tav){
+    if(str.length>6){
+        return str
+    }
+    return str.indexOf(tav)
+}
+
+function checkIfCountryNameLongerThenThree(country){
+    if(country.length<3){
+        return "yes"
+    }
+    return "no"
+}
+
+function checkFirstnameAndLastname(){
+    var fName = prompt("please enter your first name")
+    var lName = prompt("please enter your first name")
+
+    if(!fName.indexOf("a") == 0){
+        console.log("your first name contains the letter a")
+    }
+    if(lName.match("api")){
+        console.log("your last name contains the string api")
+    }
+}
+
